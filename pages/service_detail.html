@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Facial Treatment - Essentialsby Tanya</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta name="description" content="Experience our signature facial treatment at Serenity Spa. Customized skincare using premium organic products for radiant, healthy skin.">
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-primary-100">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <svg class="w-10 h-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2C11.163 2 4 9.163 4 18s7.163 16 16 16 16-7.163 16-16S28.837 2 20 2zm0 28c-6.627 0-12-5.373-12-12S13.373 6 20 6s12 5.373 12 12-5.373 12-12 12z"/>
+                        <circle cx="20" cy="18" r="8" opacity="0.6"/>
+                        <circle cx="20" cy="18" r="4" opacity="0.8"/>
+                    </svg>
+                    <span class="text-2xl font-playfair font-bold text-primary">Essentials by Tanya</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+                    <a href="services_catalog.html" class="text-primary font-medium hover:text-accent transition-colors">Services</a>
+                    <a href="therapist_profiles.html" class="text-text-secondary hover:text-primary transition-colors">Therapists</a>
+                    <a href="contact_location.html" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+                    <a href="online_booking_system.html" class="btn-primary">Book Appointment</a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" class="lg:hidden p-2 text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4 border-t border-primary-100">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+                    <a href="services_catalog.html" class="text-primary font-medium">Services</a>
+                    <a href="therapist_profiles.html" class="text-text-secondary hover:text-primary transition-colors">Therapists</a>
+                    <a href="contact_location.html" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+                    <a href="online_booking_system.html" class="btn-primary w-full text-center">Book Appointment</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="py-4 px-6 bg-surface border-b border-primary-100">
+        <div class="container mx-auto max-w-7xl">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+                <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <a href="services_catalog.html" class="text-text-secondary hover:text-primary transition-colors">Services</a>
+                <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="text-primary font-medium">Signature Facial</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section with Image Gallery -->
+    <section class="py-8 lg:py-16 px-6 bg-background">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Image Gallery -->
+                <div class="order-1 lg:order-1">
+                    <!-- Main Image -->
+                    <div class="relative mb-4 overflow-hidden rounded-xl">
+                        <img id="main-image" 
+                             src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Signature Facial Treatment" 
+                             class="w-full lg:h-[500px] h-80 object-cover transition-transform duration-300"
+                             loading="lazy"
+                             onerror="this.src='https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        
+                        <!-- Navigation Arrows -->
+                        <button id="prev-image" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-soft hover:bg-white transition-all duration-200">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <button id="next-image" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-soft hover:bg-white transition-all duration-200">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Thumbnail Strip -->
+                    <div class="hidden lg:flex space-x-4 overflow-x-auto pb-2">
+                        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Facial Treatment 1" 
+                             class="thumbnail w-20 h-16 object-cover rounded-lg cursor-pointer border-2 border-primary opacity-100 hover:opacity-100 transition-opacity duration-200"
+                             data-index="0">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Treatment Room" 
+                             class="thumbnail w-20 h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent opacity-60 hover:opacity-100 transition-opacity duration-200"
+                             data-index="1">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Spa Environment" 
+                             class="thumbnail w-20 h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent opacity-60 hover:opacity-100 transition-opacity duration-200"
+                             data-index="2">
+                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Products Used" 
+                             class="thumbnail w-20 h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent opacity-60 hover:opacity-100 transition-opacity duration-200"
+                             data-index="3">
+                    </div>
+
+                    <!-- Mobile Swipe Indicators -->
+                    <div class="flex lg:hidden justify-center space-x-2 mt-4">
+                        <div class="indicator w-2 h-2 rounded-full bg-primary" data-index="0"></div>
+                        <div class="indicator w-2 h-2 rounded-full bg-primary-200" data-index="1"></div>
+                        <div class="indicator w-2 h-2 rounded-full bg-primary-200" data-index="2"></div>
+                        <div class="indicator w-2 h-2 rounded-full bg-primary-200" data-index="3"></div>
+                    </div>
+                </div>
+
+                <!-- Service Information -->
+                <div class="order-2 lg:order-2">
+                    <div class="mb-6">
+                        <h1 class="text-fluid-3xl font-playfair font-bold text-primary mb-4">
+                            Signature Facial Treatment
+                        </h1>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="flex items-center space-x-1">
+                                <div class="flex text-accent">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary ml-2">(4.9) • 150+ reviews</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-fluid-lg text-text-secondary leading-relaxed mb-6">
+                            Experience our most popular facial treatment, customized to your unique skin needs. Using premium organic products and advanced techniques, this luxurious treatment will leave your skin radiant, refreshed, and rejuvenated.
+                        </p>
+
+                        <!-- Key Benefits -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-primary">Deep cleansing & purification</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-primary">Hydration & nourishment</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-primary">Anti-aging benefits</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-primary">Instant glow & radiance</span>
+                            </div>
+                        </div>
+
+                        <!-- Treatment Details -->
+                        <div class="bg-surface rounded-xl p-6 mb-8">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-2">Duration</h4>
+                                    <p class="text-text-secondary">60 minutes</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-2">Price</h4>
+                                    <p class="text-text-secondary">Starting from <span class="text-accent font-semibold text-lg">$120</span></p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-2">Best For</h4>
+                                    <p class="text-text-secondary">All skin types</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-2">Frequency</h4>
+                                    <p class="text-text-secondary">Monthly recommended</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Sharing -->
+                        <div class="flex items-center space-x-4">
+                            <span class="text-text-secondary font-medium">Share:</span>
+                            <div class="flex space-x-3">
+                                <button class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content with Booking Widget -->
+    <section class="py-8 lg:py-16 px-6 bg-surface">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <!-- Treatment Description -->
+                    <div class="mb-12">
+                        <h2 class="text-fluid-2xl font-playfair font-bold text-primary mb-6">
+                            Treatment Overview
+                        </h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-text-secondary leading-relaxed mb-6">
+                                Our Signature Facial is a comprehensive skincare treatment designed to address the unique needs of your skin. This luxurious 60-minute experience combines the latest in skincare technology with time-tested techniques to deliver exceptional results.
+                            </p>
+                            <p class="text-text-secondary leading-relaxed mb-6">
+                                The treatment begins with a thorough skin analysis to determine your specific skin type and concerns. Our expert aestheticians then customize the facial to target your individual needs, whether that's hydration, anti-aging, acne treatment, or overall skin health improvement.
+                            </p>
+                            <p class="text-text-secondary leading-relaxed">
+                                Using only the finest organic and natural products, this facial includes deep cleansing, gentle exfoliation, extractions if needed, a customized mask, and a nourishing moisturizer with SPF protection. You'll leave with visibly brighter, smoother, and more radiant skin.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Expandable Sections -->
+                    <div class="space-y-6">
+                        <!-- Treatment Steps -->
+                        <div class="card">
+                            <button class="accordion-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="steps-content">
+                                <h3 class="text-xl font-playfair font-semibold text-primary">Treatment Steps</h3>
+                                <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="steps-content" class="accordion-content mt-4 space-y-4">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-semibold text-sm">1</div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-1">Consultation & Skin Analysis</h4>
+                                        <p class="text-text-secondary">Detailed assessment of your skin type, concerns, and goals to customize the treatment.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-semibold text-sm">2</div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-1">Deep Cleansing</h4>
+                                        <p class="text-text-secondary">Thorough cleansing to remove makeup, impurities, and environmental pollutants.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-semibold text-sm">3</div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-1">Exfoliation</h4>
+                                        <p class="text-text-secondary">Gentle removal of dead skin cells to reveal smoother, brighter skin underneath.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-semibold text-sm">4</div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-1">Steam & Extractions</h4>
+                                        <p class="text-text-secondary">Steam to open pores followed by professional extractions if needed.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-semibold text-sm">5</div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-1">Customized Mask</h4>
+                                        <p class="text-text-secondary">Targeted mask treatment based on your specific skin needs and concerns.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-semibold text-sm">6</div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-1">Moisturizing & Protection</h4>
+                                        <p class="text-text-secondary">Application of serums, moisturizer, and SPF protection to lock in benefits.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ingredients & Products -->
+                        <div class="card">
+                            <button class="accordion-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="ingredients-content">
+                                <h3 class="text-xl font-playfair font-semibold text-primary">Premium Ingredients & Products</h3>
+                                <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="ingredients-content" class="accordion-content hidden mt-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-3">Key Ingredients</h4>
+                                        <ul class="space-y-2 text-text-secondary">
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Vitamin C for brightening</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Hyaluronic acid for hydration</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Peptides for anti-aging</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Natural botanical extracts</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-3">Product Brands</h4>
+                                        <ul class="space-y-2 text-text-secondary">
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>SkinCeuticals</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Dermalogica</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Eminence Organics</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Osmosis Skincare</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contraindications -->
+                        <div class="card">
+                            <button class="accordion-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="contraindications-content">
+                                <h3 class="text-xl font-playfair font-semibold text-primary">Contraindications & Precautions</h3>
+                                <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="contraindications-content" class="accordion-content hidden mt-4">
+                                <div class="bg-warning-50 border border-warning p-4 rounded-lg mb-4">
+                                    <p class="text-warning font-medium mb-2">Please inform us if you have any of the following conditions:</p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <ul class="space-y-2 text-text-secondary">
+                                        <li class="flex items-start space-x-2">
+                                            <svg class="w-4 h-4 text-error mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                                            </svg>
+                                            <span>Active acne or skin infections</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <svg class="w-4 h-4 text-error mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                                            </svg>
+                                            <span>Recent cosmetic procedures</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <svg class="w-4 h-4 text-error mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                                            </svg>
+                                            <span>Pregnancy or nursing</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="space-y-2 text-text-secondary">
+                                        <li class="flex items-start space-x-2">
+                                            <svg class="w-4 h-4 text-error mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                                            </svg>
+                                            <span>Allergies to specific ingredients</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <svg class="w-4 h-4 text-error mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                                            </svg>
+                                            <span>Use of retinoid medications</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <svg class="w-4 h-4 text-error mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                                            </svg>
+                                            <span>Recent sun exposure or tanning</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pricing Tiers -->
+                        <div class="card">
+                            <button class="accordion-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="pricing-content">
+                                <h3 class="text-xl font-playfair font-semibold text-primary">Pricing Options</h3>
+                                <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="pricing-content" class="accordion-content hidden mt-4">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div class="border border-primary-200 rounded-lg p-6">
+                                        <h4 class="font-semibold text-primary mb-2">Essential</h4>
+                                        <div class="text-2xl font-bold text-accent mb-4">$120</div>
+                                        <ul class="space-y-2 text-sm text-text-secondary">
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>60-minute treatment</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Basic customization</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Standard products</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="border-2 border-accent rounded-lg p-6 relative">
+                                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-white px-3 py-1 rounded-full text-xs font-medium">Most Popular</div>
+                                        <h4 class="font-semibold text-primary mb-2">Premium</h4>
+                                        <div class="text-2xl font-bold text-accent mb-4">$165</div>
+                                        <ul class="space-y-2 text-sm text-text-secondary">
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>75-minute treatment</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Full customization</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Premium products</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Facial massage</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="border border-primary-200 rounded-lg p-6">
+                                        <h4 class="font-semibold text-primary mb-2">Luxury</h4>
+                                        <div class="text-2xl font-bold text-accent mb-4">$220</div>
+                                        <ul class="space-y-2 text-sm text-text-secondary">
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>90-minute treatment</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Ultra customization</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Luxury products</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>LED light therapy</span>
+                                            </li>
+                                            <li class="flex items-center space-x-2">
+                                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Take-home products</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Widget (Sticky on desktop) -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-24">
+                        <div class="card-elevated">
+                            <h3 class="text-xl font-playfair font-semibold text-primary mb-6">Book Your Treatment</h3>
+                            
+                            <!-- Therapist Selection -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-primary mb-2">Select Therapist</label>
+                                <select class="form-input">
+                                    <option>Dr. Sophia Martinez (Lead Aesthetician)</option>
+                                    <option>Lisa Chen (Wellness Specialist)</option>
+                                    <option>Any Available</option>
+                                </select>
+                            </div>
+
+                            <!-- Date Selection -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-primary mb-2">Select Date</label>
+                                <input type="date" class="form-input" min="2025-01-02">
+                            </div>
+
+                            <!-- Time Slots -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-primary mb-3">Available Times</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button class="p-3 border border-primary-200 rounded-lg text-sm hover:border-primary hover:bg-primary-50 transition-colors">9:00 AM</button>
+                                    <button class="p-3 border border-primary-200 rounded-lg text-sm hover:border-primary hover:bg-primary-50 transition-colors">10:30 AM</button>
+                                    <button class="p-3 border border-primary-200 rounded-lg text-sm hover:border-primary hover:bg-primary-50 transition-colors">1:00 PM</button>
+                                    <button class="p-3 border border-primary-200 rounded-lg text-sm hover:border-primary hover:bg-primary-50 transition-colors">2:30 PM</button>
+                                    <button class="p-3 border border-primary-200 rounded-lg text-sm hover:border-primary hover:bg-primary-50 transition-colors">4:00 PM</button>
+                                    <button class="p-3 border border-primary-200 rounded-lg text-sm opacity-50 cursor-not-allowed" disabled>5:30 PM</button>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Summary -->
+                            <div class="bg-surface rounded-lg p-4 mb-6">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-text-secondary">Signature Facial (Essential)</span>
+                                    <span class="font-semibold text-primary">$120</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm text-text-secondary">
+                                    <span>Duration: 60 minutes</span>
+                                </div>
+                            </div>
+
+                            <!-- Book Now Button -->
+                            <button class="btn-accent w-full text-lg py-4 mb-4 hover-lift">
+                                Book Now - $120
+                            </button>
+
+                            <!-- Additional Options -->
+                            <div class="text-center space-y-2">
+                                <button class="text-primary hover:text-accent transition-colors text-sm underline">
+                                    View Package Deals
+                                </button>
+                                <p class="text-xs text-text-secondary">
+                                    Free cancellation up to 24 hours before appointment
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Carousel -->
+    <section class="py-16 px-6 bg-background">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-fluid-2xl font-playfair font-bold text-primary mb-4">
+                    What Our Clients Say
+                </h2>
+                <p class="text-fluid-base text-text-secondary">
+                    Real experiences from clients who've experienced our Signature Facial
+                </p>
+            </div>
+
+            <div class="relative">
+                <div id="testimonials-container" class="overflow-hidden">
+                    <div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Testimonial 1 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="card text-center max-w-4xl mx-auto">
+                                <div class="mb-6">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                         alt="Sarah Johnson" 
+                                         class="w-16 h-16 rounded-full mx-auto object-cover"
+                                         loading="lazy"
+                                         onerror="this.src='https://images.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg'; this.onerror=null;">
+                                </div>
+                                <div class="flex justify-center mb-4">
+                                    <div class="flex text-accent">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <blockquote class="text-fluid-lg text-text-secondary italic mb-6 leading-relaxed">
+                                    "The Signature Facial at Serenity Spa completely transformed my skin! Dr. Martinez was incredibly knowledgeable and customized the treatment perfectly for my sensitive skin. My complexion has never looked better, and the glow lasted for weeks. I'm already booked for my next appointment!"
+                                </blockquote>
+                                <div>
+                                    <h4 class="font-semibold text-primary text-lg">Sarah Johnson</h4>
+                                    <p class="text-sm text-text-secondary">Regular Client • 8 treatments</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="card text-center max-w-4xl mx-auto">
+                                <div class="mb-6">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                         alt="Michael Chen" 
+                                         class="w-16 h-16 rounded-full mx-auto object-cover"
+                                         loading="lazy"
+                                         onerror="this.src='https://images.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg'; this.onerror=null;">
+                                </div>
+                                <div class="flex justify-center mb-4">
+                                    <div class="flex text-accent">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <blockquote class="text-fluid-lg text-text-secondary italic mb-6 leading-relaxed">
+                                    "As someone who travels frequently for business, my skin often feels tired and dull. The Signature Facial here has become my go-to treatment. The premium package with LED therapy is incredible – my skin looks refreshed and professional for important meetings. Worth every penny!"
+                                </blockquote>
+                                <div>
+                                    <h4 class="font-semibold text-primary text-lg">Kun Chikuni</h4>
+                                    <p class="text-sm text-text-secondary">Business Executive • 5 treatments</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="card text-center max-w-4xl mx-auto">
+                                <div class="mb-6">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                         alt="Emma Rodriguez" 
+                                         class="w-16 h-16 rounded-full mx-auto object-cover"
+                                         loading="lazy"
+                                         onerror="this.src='https://images.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg'; this.onerror=null;">
+                                </div>
+                                <div class="flex justify-center mb-4">
+                                    <div class="flex text-accent">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <blockquote class="text-fluid-lg text-text-secondary italic mb-6 leading-relaxed">
+                                    "I have acne-prone skin and was hesitant to try facial treatments, but Lisa was amazing! She explained every step and chose products specifically for my skin concerns. After three months of monthly treatments, my skin has cleared up significantly and feels so much healthier."
+                                </blockquote>
+                                <div>
+                                    <h4 class="font-semibold text-primary text-lg">Emma Rodriguez</h4>
+                                    <p class="text-sm text-text-secondary">Wellness Enthusiast • 6 treatments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button id="testimonials-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-soft hover:bg-white transition-all duration-200">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button id="testimonials-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-soft hover:bg-white transition-all duration-200">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Carousel Indicators -->
+                <div class="flex justify-center space-x-2 mt-8">
+                    <button class="testimonial-indicator w-3 h-3 rounded-full bg-primary" data-index="0"></button>
+                    <button class="testimonial-indicator w-3 h-3 rounded-full bg-primary-200" data-index="1"></button>
+                    <button class="testimonial-indicator w-3 h-3 rounded-full bg-primary-200" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="py-16 px-6 bg-surface">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-12">
+                <h2 class="text-fluid-2xl font-playfair font-bold text-primary mb-4">
+                    You Might Also Like
+                </h2>
+                <p class="text-fluid-base text-text-secondary">
+                    Enhance your experience with these complementary treatments
+                </p>
+            </div>
+
+            <!-- Desktop Grid Layout -->
+            <div class="hidden lg:grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Related Service 1 -->
+                <div class="card hover-lift group cursor-pointer" onclick="window.location.href='service_detail.html'">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Deep Cleansing Facial" 
+                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                             loading="lazy"
+                             onerror="this.src='https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    </div>
+                    <h3 class="text-lg font-playfair font-semibold text-primary mb-2">Deep Cleansing Facial</h3>
+                    <p class="text-text-secondary text-sm mb-4">Perfect for oily or acne-prone skin with deep pore cleansing.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-semibold">From $95</span>
+                        <span class="text-xs text-text-secondary">45 min</span>
+                    </div>
+                </div>
+
+                <!-- Related Service 2 -->
+                <div class="card hover-lift group cursor-pointer" onclick="window.location.href='service_detail.html'">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Relaxation Massage" 
+                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                             loading="lazy"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/08/05/26/woman-1807533_1280.jpg'; this.onerror=null;">
+                    </div>
+                    <h3 class="text-lg font-playfair font-semibold text-primary mb-2">Relaxation Massage</h3>
+                    <p class="text-text-secondary text-sm mb-4">Complement your facial with a soothing full-body massage.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-semibold">From $130</span>
+                        <span class="text-xs text-text-secondary">60 min</span>
+                    </div>
+                </div>
+
+                <!-- Related Service 3 -->
+                <div class="card hover-lift group cursor-pointer" onclick="window.location.href='service_detail.html'">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pixabay.com/photo/2017/08/06/15/13/woman-2593366_1280.jpg" 
+                             alt="Wellness Package" 
+                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                             loading="lazy"
+                             onerror="this.src='https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    </div>
+                    <h3 class="text-lg font-playfair font-semibold text-primary mb-2">Spa Day Package</h3>
+                    <p class="text-text-secondary text-sm mb-4">Full day of pampering including facial, massage, and more.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-semibold">From $285</span>
+                        <span class="text-xs text-text-secondary">4 hours</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Horizontal Scroll -->
+            <div class="lg:hidden overflow-x-auto pb-4">
+                <div class="flex space-x-6 w-max">
+                    <!-- Related Service 1 Mobile -->
+                    <div class="card hover-lift group cursor-pointer w-64 flex-shrink-0" onclick="window.location.href='service_detail.html'">
+                        <div class="relative overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Deep Cleansing Facial" 
+                                 class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                                 loading="lazy"
+                                 onerror="this.src='https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        </div>
+                        <h3 class="text-lg font-playfair font-semibold text-primary mb-2">Deep Cleansing Facial</h3>
+                        <p class="text-text-secondary text-sm mb-4">Perfect for oily or acne-prone skin with deep pore cleansing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">From $95</span>
+                            <span class="text-xs text-text-secondary">45 min</span>
+                        </div>
+                    </div>
+
+                    <!-- Related Service 2 Mobile -->
+                    <div class="card hover-lift group cursor-pointer w-64 flex-shrink-0" onclick="window.location.href='service_detail.html'">
+                        <div class="relative overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Relaxation Massage" 
+                                 class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                                 loading="lazy"
+                                 onerror="this.src='https://images.pixabay.com/photo/2016/11/08/05/26/woman-1807533_1280.jpg'; this.onerror=null;">
+                        </div>
+                        <h3 class="text-lg font-playfair font-semibold text-primary mb-2">Relaxation Massage</h3>
+                        <p class="text-text-secondary text-sm mb-4">Complement your facial with a soothing full-body massage.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">From $130</span>
+                            <span class="text-xs text-text-secondary">60 min</span>
+                        </div>
+                    </div>
+
+                    <!-- Related Service 3 Mobile -->
+                    <div class="card hover-lift group cursor-pointer w-64 flex-shrink-0" onclick="window.location.href='service_detail.html'">
+                        <div class="relative overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.pixabay.com/photo/2017/08/06/15/13/woman-2593366_1280.jpg" 
+                                 alt="Wellness Package" 
+                                 class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                                 loading="lazy"
+                                 onerror="this.src='https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        </div>
+                        <h3 class="text-lg font-playfair font-semibold text-primary mb-2">Spa Day Package</h3>
+                        <p class="text-text-secondary text-sm mb-4">Full day of pampering including facial, massage, and more.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">From $285</span>
+                            <span class="text-xs text-text-secondary">4 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="services_catalog.html" class="btn-secondary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-6 bg-background">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-fluid-2xl font-playfair font-bold text-primary mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-fluid-base text-text-secondary">
+                    Everything you need to know about our Signature Facial treatment
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="card">
+                    <button class="faq-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="faq-1">
+                        <h3 class="text-left text-lg font-semibold text-primary">How often should I get a Signature Facial?</h3>
+                        <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-1" class="faq-content mt-4">
+                        <p class="text-text-secondary leading-relaxed">
+                            For optimal results, we recommend scheduling a Signature Facial every 4-6 weeks. This allows your skin's natural renewal cycle to complete while maintaining the benefits of professional treatment. However, the frequency can be adjusted based on your skin type, concerns, and lifestyle factors.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="card">
+                    <button class="faq-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="faq-2">
+                        <h3 class="text-left text-lg font-semibold text-primary">What should I expect during my first visit?</h3>
+                        <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-2" class="faq-content hidden mt-4">
+                        <p class="text-text-secondary leading-relaxed">
+                            Your first visit will begin with a comprehensive skin consultation where our aesthetician will analyze your skin type, discuss your concerns and goals, and review your skincare routine. We'll then customize the facial treatment specifically for your needs. Please arrive 15 minutes early to complete intake forms and allow time to relax before your treatment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="card">
+                    <button class="faq-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="faq-3">
+                        <h3 class="text-left text-lg font-semibold text-primary">Are there any side effects or downtime?</h3>
+                        <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-3" class="faq-content hidden mt-4">
+                        <p class="text-text-secondary leading-relaxed">
+                            The Signature Facial is a gentle treatment with minimal to no downtime. Some clients may experience slight redness immediately after treatment, which typically subsides within 1-2 hours. You can return to your normal activities immediately and apply makeup if desired. We'll provide post-treatment care instructions to maximize your results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="card">
+                    <button class="faq-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="faq-4">
+                        <h3 class="text-left text-lg font-semibold text-primary">Can I customize the treatment for my skin concerns?</h3>
+                        <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-4" class="faq-content hidden mt-4">
+                        <p class="text-text-secondary leading-relaxed">
+                            Absolutely! Our Signature Facial is designed to be fully customizable. Whether you're dealing with acne, dryness, signs of aging, sensitivity, or hyperpigmentation, our skilled aestheticians will select the appropriate products, techniques, and add-ons to address your specific concerns and skin goals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="card">
+                    <button class="faq-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="faq-5">
+                        <h3 class="text-left text-lg font-semibold text-primary">What's included in the different pricing tiers?</h3>
+                        <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-5" class="faq-content hidden mt-4">
+                        <p class="text-text-secondary leading-relaxed mb-3">
+                            Our three tiers offer different levels of luxury and add-ons:
+                        </p>
+                        <ul class="text-text-secondary space-y-2">
+                            <li><strong>Essential ($120):</strong> 60-minute treatment with standard customization and professional-grade products</li>
+                            <li><strong>Premium ($165):</strong> 75-minute treatment with extended facial massage, premium products, and enhanced customization</li>
+                            <li><strong>Luxury ($220):</strong> 90-minute treatment with LED light therapy, luxury products, and take-home skincare samples</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="card">
+                    <button class="faq-header w-full flex items-center justify-between p-0 bg-transparent border-none" data-target="faq-6">
+                        <h3 class="text-left text-lg font-semibold text-primary">What is your cancellation policy?</h3>
+                        <svg class="w-5 h-5 text-primary transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-6" class="faq-content hidden mt-4">
+                        <p class="text-text-secondary leading-relaxed">
+                            We offer free cancellation up to 24 hours before your scheduled appointment. Cancellations made with less than 24 hours notice or no-shows will be charged 50% of the service fee. We understand that emergencies happen, so please contact us as soon as possible if you need to reschedule.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 px-6 bg-primary text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-fluid-2xl font-playfair font-bold mb-4">
+                Ready to Experience the Signature Difference?
+            </h2>
+            <p class="text-fluid-base mb-8 opacity-90">
+                Book your personalized Signature Facial today and discover the transformative power of professional skincare
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="online_booking_system.html" class="btn-accent text-lg px-8 py-4 hover-lift">
+                    Book Signature Facial
+                </a>
+                <a href="services_catalog.html" class="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg font-medium hover:bg-white/20 transition-all duration-300">
+                    Browse All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-800 text-white py-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2C11.163 2 4 9.163 4 18s7.163 16 16 16 16-7.163 16-16S28.837 2 20 2zm0 28c-6.627 0-12-5.373-12-12S13.373 6 20 6s12 5.373 12 12-5.373 12-12 12z"/>
+                            <circle cx="20" cy="18" r="8" opacity="0.6"/>
+                            <circle cx="20" cy="18" r="4" opacity="0.8"/>
+                        </svg>
+                        <span class="text-xl font-playfair font-bold">Essentials by Tanya</span>
+                    </div>
+                    <p class="text-white/80 leading-relaxed">
+                        Your sanctuary for beauty, wellness, and rejuvenation. Experience the perfect blend of luxury and tranquility.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-playfair font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-white/80 hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="services_catalog.html" class="text-white/80 hover:text-accent transition-colors">Services</a></li>
+                        <li><a href="therapist_profiles.html" class="text-white/80 hover:text-accent transition-colors">Therapists</a></li>
+                        <li><a href="online_booking_system.html" class="text-white/80 hover:text-accent transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-playfair font-semibold mb-6">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-white/80">123 Wellness Avenue, Spa District</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-white/80">(555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-white/80">info@essentialsbytanya.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="text-lg font-playfair font-semibold mb-6">Business Hours</h3>
+                    <div class="space-y-2 text-white/80">
+                        <div class="flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>9:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Saturday</span>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>10:00 AM - 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media & Copyright -->
+            <div class="border-t border-white/20 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex space-x-6 mb-4 md:mb-0">
+                        <a href="#" class="text-white/80 hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-white/60 text-sm">
+                        © 2025 Essentials by Tanya. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Image Gallery Navigation
+        const images = [
+            'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            'https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        ];
+        
+        let currentImageIndex = 0;
+        const mainImage = document.getElementById('main-image');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        function updateImage(index) {
+            currentImageIndex = index;
+            mainImage.src = images[index];
+            
+            // Update thumbnail borders
+            thumbnails.forEach((thumb, i) => {
+                if (i === index) {
+                    thumb.classList.remove('opacity-60', 'border-transparent');
+                    thumb.classList.add('opacity-100', 'border-primary');
+                } else {
+                    thumb.classList.remove('opacity-100', 'border-primary');
+                    thumb.classList.add('opacity-60', 'border-transparent');
+                }
+            });
+            
+            // Update mobile indicators
+            indicators.forEach((indicator, i) => {
+                if (i === index) {
+                    indicator.classList.remove('bg-primary-200');
+                    indicator.classList.add('bg-primary');
+                } else {
+                    indicator.classList.remove('bg-primary');
+                    indicator.classList.add('bg-primary-200');
+                }
+            });
+        }
+        
+        // Thumbnail click handlers
+        thumbnails.forEach((thumb, index) => {
+            thumb.addEventListener('click', () => updateImage(index));
+        });
+        
+        // Navigation arrows
+        document.getElementById('prev-image').addEventListener('click', () => {
+            const newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : images.length - 1;
+            updateImage(newIndex);
+        });
+        
+        document.getElementById('next-image').addEventListener('click', () => {
+            const newIndex = currentImageIndex < images.length - 1 ? currentImageIndex + 1 : 0;
+            updateImage(newIndex);
+        });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const target = document.getElementById(this.dataset.target);
+                const icon = this.querySelector('svg');
+                
+                if (target.classList.contains('hidden')) {
+                    target.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    target.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const target = document.getElementById(this.dataset.target);
+                const icon = this.querySelector('svg');
+                
+                if (target.classList.contains('hidden')) {
+                    target.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    target.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Testimonials Carousel
+        let currentTestimonial = 0;
+        const testimonialsTrack = document.getElementById('testimonials-track');
+        const testimonialIndicators = document.querySelectorAll('.testimonial-indicator');
+        const totalTestimonials = 3;
+        
+        function updateTestimonial(index) {
+            currentTestimonial = index;
+            testimonialsTrack.style.transform = `translateX(-${index * 100}%)`;
+            
+            testimonialIndicators.forEach((indicator, i) => {
+                if (i === index) {
+                    indicator.classList.remove('bg-primary-200');
+                    indicator.classList.add('bg-primary');
+                } else {
+                    indicator.classList.remove('bg-primary');
+                    indicator.classList.add('bg-primary-200');
+                }
+            });
+        }
+        
+        document.getElementById('testimonials-prev').addEventListener('click', () => {
+            const newIndex = currentTestimonial > 0 ? currentTestimonial - 1 : totalTestimonials - 1;
+            updateTestimonial(newIndex);
+        });
+        
+        document.getElementById('testimonials-next').addEventListener('click', () => {
+            const newIndex = currentTestimonial < totalTestimonials - 1 ? currentTestimonial + 1 : 0;
+            updateTestimonial(newIndex);
+        });
+        
+        testimonialIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => updateTestimonial(index));
+        });
+
+        // Auto-advance testimonials
+        setInterval(() => {
+            const newIndex = currentTestimonial < totalTestimonials - 1 ? currentTestimonial + 1 : 0;
+            updateTestimonial(newIndex);
+        }, 8000);
+
+        // Time slot selection
+        document.querySelectorAll('button:has-text(":00"):not([disabled])').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove selection from other buttons
+                document.querySelectorAll('button:has-text(":00")').forEach(btn => {
+                    btn.classList.remove('border-primary', 'bg-primary-50');
+                    btn.classList.add('border-primary-200');
+                });
+                
+                // Add selection to clicked button
+                this.classList.remove('border-primary-200');
+                this.classList.add('border-primary', 'bg-primary-50');
+            });
+        });
+
+        // Touch/swipe support for mobile gallery
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        mainImage.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        mainImage.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left - next image
+                    const newIndex = currentImageIndex < images.length - 1 ? currentImageIndex + 1 : 0;
+                    updateImage(newIndex);
+                } else {
+                    // Swipe right - previous image
+                    const newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : images.length - 1;
+                    updateImage(newIndex);
+                }
+            }
+        }
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-soft');
+            } else {
+                header.classList.remove('shadow-soft');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Social sharing functionality
+        document.querySelectorAll('[class*="bg-blue-600"], [class*="bg-primary"]').forEach(button => {
+            if (button.querySelector('svg')) {
+                button.addEventListener('click', function() {
+                    const currentUrl = window.location.href;
+                    const text = 'Check out this amazing Signature Facial treatment at Serenity Spa!';
+                    
+                    if (this.classList.contains('bg-blue-600')) {
+                        // Twitter share
+                        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(currentUrl)}`, '_blank');
+                    } else if (this.classList.contains('bg-primary')) {
+                        // Instagram share (open Instagram)
+                        window.open('https://www.instagram.com/', '_blank');
+                    }
+                });
+            }
+        });
+
+        // Set minimum date for booking widget
+        const dateInput = document.querySelector('input[type="date"]');
+        if (dateInput) {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            dateInput.min = tomorrow.toISOString().split('T')[0];
+            dateInput.value = tomorrow.toISOString().split('T')[0];
+        }
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+<script id="dhws-elementInspector" src="../public/dhws-web-inspector.js"></script>
+<script id="dhws-errorTracker" src="../public/dhws-error-tracker.js"></script>
+</body>
+</html>
