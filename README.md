@@ -9,6 +9,8 @@ A modern HTML project utilizing Tailwind CSS for building responsive web applica
 - **Custom Components** - Pre-built component classes for buttons and containers
 - **NPM Scripts** - Easy-to-use commands for development and building
 - **Responsive Design** - Mobile-first approach for all screen sizes
+- **Yet to be added a appointment booking system**
+- Target company - Tanya Essentials
 
 ## 📋 Prerequisites
 
@@ -72,11 +74,6 @@ The app is built with responsive design using Tailwind CSS breakpoints:
 - `md`: 768px and up
 - `lg`: 1024px and up
 - `xl`: 1280px and up
-- `2xl`: 1536px and up
+- `2xl`: 1536px and y HTML and Tailwind CSS
 
-## 🙏 Acknowledgments
-
-- Built with [Rocket.new](https://rocket.new)
-- Powered by HTML and Tailwind CSS
-
-Built with ❤️ on Rocket.new
+Built with ❤️ on Rocket.n
