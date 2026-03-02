@@ -15,7 +15,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/public/assets/img3.jpg"
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2940"
             className="w-full h-full object-cover"
             loading="lazy"
             onError={(e) =>
@@ -25,24 +25,25 @@ export default function Home() {
               )
             }
           />
-          <div className="absolute inset-0 bg-primary-900/40"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto py-24">
-          <h1 className="text-fluid-3xl font-playfair font-bold text-white mb-6 leading-tight">
-            Discover Your Inner Radiance
+        <div className="relative z-10 text-center px-6 w-full max-w-5xl mx-auto py-24 mt-16">
+          <div className="inline-block mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-white tracking-[0.2em] uppercase pb-2 border-b-[3px] border-unify">
+              Hot Summer
+            </h2>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
+            Relaxing Massage
           </h1>
-          <p className="text-fluid-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experience luxury beauty therapy and massage services in our serene
-            sanctuary.
+          <p className="text-3xl md:text-4xl font-bold text-white mb-10 drop-shadow-md">
+            30% OFF
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/online_booking_system" className="btn-accent text-lg px-8 py-4 hover-lift">
-              Book Your Treatment
-            </Link>
-            <Link href="/services_catalog" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg font-medium hover:bg-white/20 transition-all duration-300">
-              Explore Services
-            </Link>
+          <div className="flex justify-center">
+            <button className="bg-unify hover:bg-[#7a9e19] text-white text-sm font-bold uppercase tracking-wider py-4 px-8 rounded-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5" onClick={() => router.push("/services_catalog")}>
+              Learn More
+            </button>
           </div>
         </div>
       </section>
@@ -116,7 +117,7 @@ export default function Home() {
             ))}
           </div>
 
-            <div className="text-center mt-12">
+          <div className="text-center mt-12">
             <Link href="/services_catalog" className="btn-secondary">View All Services</Link>
           </div>
         </div>

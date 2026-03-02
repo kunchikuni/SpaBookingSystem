@@ -93,6 +93,11 @@ module.exports = {
           800: "#4A2220", // terracotta-800
           900: "#251110", // terracotta-900
         },
+        unify: {
+          DEFAULT: "#96C11F",
+          500: "#96C11F",
+          600: "#7A9E19",
+        },
       },
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],
