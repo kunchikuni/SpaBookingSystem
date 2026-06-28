@@ -7,11 +7,14 @@ export interface GalleryItemSeed {
 }
 
 export const galleryItems: GalleryItemSeed[] = [
-  { id: "g1", imageUrl: "/assets/img1.jpg", altText: "Facial treatment room", label: "Facial Suite", category: "facials" },
-  { id: "g2", imageUrl: "/assets/img2.jpg", altText: "Massage treatment room", label: "Massage Room", category: "massage" },
-  { id: "g3", imageUrl: "/assets/img3.jpg", altText: "Relaxation lounge", label: "Relaxation Lounge", category: "interior" },
-  { id: "g4", imageUrl: "/assets/img4.jpg", altText: "Body treatment in progress", label: "Body Treatment", category: "body" },
-  { id: "g5", imageUrl: "/assets/img6.jpg", altText: "Spa reception area", label: "Reception", category: "interior" },
-  { id: "g6", imageUrl: "/assets/img9.jpg", altText: "Facial product application", label: "Skincare Application", category: "facials" },
-  { id: "g7", imageUrl: "/assets/img10.jpg", altText: "Aromatherapy oils and candles", label: "Aromatherapy Setup", category: "wellness" },
+  { id: "g1", imageUrl: "/assets/photos/facial-mud-mask.jpg", altText: "Clay mask facial treatment", label: "Clay Mask Facial", category: "facials" },
+  { id: "g2", imageUrl: "/assets/photos/massage-table-orchid.jpg", altText: "Client relaxing on massage table with orchid", label: "Relaxation Massage", category: "massage" },
+  { id: "g3", imageUrl: "/assets/photos/facial-massage-relax.jpg", altText: "Facial massage treatment", label: "Facial Massage", category: "facials" },
+  { id: "g4", imageUrl: "/assets/photos/sauna-relax.jpg", altText: "Client relaxing in sauna", label: "Sauna", category: "wellness" },
+  { id: "g5", imageUrl: "/assets/photos/foot-spa-frangipani.jpg", altText: "Foot spa treatment with frangipani flowers", label: "Foot Spa", category: "body" },
+  { id: "g6", imageUrl: "/assets/photos/hot-stone-massage.jpg", altText: "Hot stone massage treatment", label: "Hot Stone Massage", category: "massage" },
+  { id: "g7", imageUrl: "/assets/photos/herbal-compress-massage.jpg", altText: "Herbal compress massage treatment", label: "Herbal Compress", category: "massage" },
+  { id: "g8", imageUrl: "/assets/photos/lounge-chairs-juice.jpg", altText: "Relaxation lounge with refreshments", label: "Relaxation Lounge", category: "interior" },
+  { id: "g9", imageUrl: "/assets/photos/cucumber-eye-mask.jpg", altText: "Cucumber eye mask spa treatment", label: "Cucumber Eye Treatment", category: "facials" },
+  { id: "g10", imageUrl: "/assets/photos/oil-massage-candles.jpg", altText: "Oil massage by candlelight", label: "Candlelit Oil Massage", category: "wellness" },
 ];
