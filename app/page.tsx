@@ -6,6 +6,17 @@ import { getAllTestimonials } from "@/lib/repositories/testimonialRepository";
 import ServiceCard from "@/components/features/ServiceCard";
 import StarRating from "@/components/ui/StarRating";
 import NewsletterForm from "@/components/features/NewsletterForm";
+import HeroSlideshow from "@/components/features/HeroSlideshow";
+
+const HERO_SLIDES = [
+  "/assets/photos/hero-slide-stones-orchid.jpg",
+  "/assets/photos/hero-slide-candlelit-massage.jpg",
+  "/assets/photos/hero-slide-deep-massage.jpg",
+  "/assets/photos/hero-slide-oil-bottle.jpg",
+  "/assets/photos/hero-slide-oil-pour.jpg",
+  "/assets/photos/hero-slide-stones-diffuser.jpg",
+  "/assets/photos/hero-slide-green-towel.jpg",
+];
 
 const HOW_IT_WORKS = [
   {
@@ -37,13 +48,7 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center justify-center px-6 text-center overflow-hidden">
-        <Image
-          src="/assets/photos/oil-massage-candles.jpg"
-          alt=""
-          fill
-          priority
-          className="object-cover"
-        />
+        <HeroSlideshow images={HERO_SLIDES} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
         <div className="relative max-w-2xl text-white">
           <p className="font-script text-4xl text-secondary-200 mb-2">Welcome to</p>
