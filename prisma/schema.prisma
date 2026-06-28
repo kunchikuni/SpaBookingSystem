@@ -1,0 +1,234 @@
+// Phase 1 deliverable — designed, not connected to a live database.
+// Provider is postgresql; running `prisma migrate` against a real instance
+// is a later, explicit decision, not part of this phase.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ServiceCategory {
+  FACIAL
+  MASSAGE
+  BODY
+  PACKAGE
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+  NO_SHOW
+}
+
+enum ContactMethod {
+  EMAIL
+  PHONE
+  TEXT
+}
+
+enum FaqPage {
+  GENERAL
+  CONTACT
+  SERVICE_DETAIL
+}
+
+model Service {
+  id              String          @id @default(cuid())
+  slug            String          @unique
+  name            String
+  category        ServiceCategory
+  description     String
+  durationMinutes Int
+  priceCents      Int
+  imageUrl        String
+  rating          Float           @default(0)
+  isFeatured      Boolean         @default(false)
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  tiers        ServiceTier[]
+  therapists   TherapistService[]
+  bookings     Booking[]
+  testimonials Testimonial[]
+
+  @@index([category])
+}
+
+// The "Essential / Premium / Luxury" pricing tiers seen on the legacy
+// service detail page — one service can have several priced tiers.
+model ServiceTier {
+  id              String  @id @default(cuid())
+  serviceId       String
+  service         Service @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  name            String // "Essential" | "Premium" | "Luxury"
+  priceCents      Int
+  durationMinutes Int
+  description     String
+
+  @@index([serviceId])
+}
+
+model AddOn {
+  id         String  @id @default(cuid())
+  name       String
+  priceCents Int
+  isActive   Boolean @default(true)
+
+  bookings BookingAddOn[]
+}
+
+model Therapist {
+  id              String  @id @default(cuid())
+  slug            String  @unique
+  name            String
+  title           String
+  bio             String
+  speciality      String
+  experienceYears Int
+  rating          Float   @default(0)
+  reviewCount     Int     @default(0)
+  photoUrl        String
+  isActive        Boolean @default(true)
+
+  services TherapistService[]
+  bookings Booking[]
+}
+
+// Many-to-many: which therapists can perform which services.
+// Drives the therapist-selection step of the booking wizard.
+model TherapistService {
+  therapistId String
+  serviceId   String
+  therapist   Therapist @relation(fields: [therapistId], references: [id], onDelete: Cascade)
+  service     Service   @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@id([therapistId, serviceId])
+}
+
+// No accounts/login for the MVP — a Customer record is upserted by email
+// the first time someone books or submits a form.
+model Customer {
+  id        String   @id @default(cuid())
+  firstName String
+  lastName  String
+  email     String   @unique
+  phone     String
+  createdAt DateTime @default(now())
+
+  bookings Booking[]
+}
+
+model Booking {
+  id              String        @id @default(cuid())
+  customerId      String
+  customer        Customer      @relation(fields: [customerId], references: [id])
+  serviceId       String
+  service         Service       @relation(fields: [serviceId], references: [id])
+  therapistId     String?
+  therapist       Therapist?    @relation(fields: [therapistId], references: [id])
+  scheduledStart  DateTime
+  scheduledEnd    DateTime
+  status          BookingStatus @default(PENDING)
+  totalPriceCents Int
+  specialRequests String?
+  smsReminders    Boolean       @default(false)
+  emailUpdates    Boolean       @default(false)
+  createdAt       DateTime      @default(now())
+
+  addOns BookingAddOn[]
+
+  // Prevents two bookings for the same therapist at the same start time.
+  // (Doesn't prevent overlapping different-length services — see
+  // docs/ARCHITECTURE.md "Deliberately out of scope" for the real fix.)
+  @@unique([therapistId, scheduledStart])
+  @@index([customerId])
+}
+
+model BookingAddOn {
+  bookingId String
+  addOnId   String
+  booking   Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  addOn     AddOn   @relation(fields: [addOnId], references: [id])
+
+  @@id([bookingId, addOnId])
+}
+
+model Testimonial {
+  id           String   @id @default(cuid())
+  customerName String
+  role         String?
+  quote        String
+  rating       Int
+  avatarUrl    String?
+  serviceId    String?
+  service      Service? @relation(fields: [serviceId], references: [id])
+  isPublished  Boolean  @default(true)
+  createdAt    DateTime @default(now())
+}
+
+model Product {
+  id          String  @id @default(cuid())
+  slug        String  @unique
+  name        String
+  category    String
+  priceCents  Int
+  rating      Float   @default(0)
+  reviewCount Int     @default(0)
+  badge       String?
+  imageUrl    String
+  isActive    Boolean @default(true)
+}
+
+model GalleryItem {
+  id       String  @id @default(cuid())
+  imageUrl String
+  altText  String
+  label    String?
+  category String
+}
+
+model Offer {
+  id                   String   @id @default(cuid())
+  title                String
+  description          String
+  originalPriceCents   Int
+  discountedPriceCents Int
+  durationMinutes      Int?
+  badge                String?
+  imageUrl             String
+  isActive             Boolean  @default(true)
+}
+
+model Faq {
+  id        String  @id @default(cuid())
+  question  String
+  answer    String
+  page      FaqPage @default(GENERAL)
+  sortOrder Int     @default(0)
+}
+
+model ContactSubmission {
+  id                     String        @id @default(cuid())
+  name                   String
+  email                  String
+  phone                  String?
+  serviceInterest        String?
+  preferredContactMethod ContactMethod @default(EMAIL)
+  message                String
+  status                 String        @default("NEW")
+  createdAt              DateTime      @default(now())
+}
+
+model NewsletterSubscriber {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  isActive     Boolean  @default(true)
+  subscribedAt DateTime @default(now())
+}
