@@ -9,6 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 import Badge from "@/components/ui/Badge";
 import StarRating from "@/components/ui/StarRating";
 import Accordion from "@/components/ui/Accordion";
+import PriceListRow from "@/components/ui/PriceListRow";
 
 // Dynamic route -- fixes a real legacy bug. The old site had exactly one
 // static service_detail.jsx page, so every "Learn More" link landed on the
@@ -133,17 +134,20 @@ export default async function ServiceDetailPage({
 
       {service.tiers && service.tiers.length > 0 && (
         <section className="py-12 px-6 bg-surface">
-          <div className="container mx-auto max-w-5xl">
-            <h2 className="text-2xl font-playfair font-bold text-primary mb-6 text-center">
+          <div className="container mx-auto max-w-3xl">
+            <h2 className="text-2xl font-playfair font-bold text-primary mb-6 text-center underline decoration-secondary underline-offset-8">
               Pricing Options
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {service.tiers.map((tier) => (
-                <div key={tier.name} className="card text-center">
-                  <h3 className="text-lg font-playfair font-semibold text-primary mb-2">{tier.name}</h3>
-                  <p className="text-2xl font-bold text-accent mb-1">{formatPrice(tier.priceCents)}</p>
-                  <p className="text-xs text-text-secondary mb-3">{formatDuration(tier.durationMinutes)}</p>
-                  <p className="text-sm text-text-secondary">{tier.description}</p>
+            <div className="space-y-3">
+              {service.tiers.map((tier, idx) => (
+                <div key={tier.name}>
+                  <PriceListRow
+                    name={tier.name}
+                    detail={formatDuration(tier.durationMinutes)}
+                    price={formatPrice(tier.priceCents)}
+                    ribbonTone={idx === 0 ? "secondary" : idx === 1 ? "primary" : "accent"}
+                  />
+                  <p className="text-sm text-text-secondary mt-2 px-5">{tier.description}</p>
                 </div>
               ))}
             </div>

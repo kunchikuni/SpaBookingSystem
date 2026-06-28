@@ -43,8 +43,11 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-10 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-playfair font-bold text-primary">
-          Essentials by Tanya
+        <Link href="/" className="flex items-baseline gap-2">
+          <span className="font-script text-3xl text-secondary-200 leading-none">Essentials</span>
+          <span className="text-[10px] tracking-[0.3em] text-white/80 font-medium uppercase">
+            by Tanya
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center space-x-6 text-sm font-bold tracking-wider">
@@ -55,12 +58,12 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`uppercase relative transition-colors ${
-                  active ? "text-unify" : "text-white hover:text-unify"
+                  active ? "text-secondary-200" : "text-white hover:text-secondary-200"
                 }`}
               >
                 {link.label}
                 {active && (
-                  <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-unify" />
+                  <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-secondary-200" />
                 )}
               </Link>
             );
@@ -91,7 +94,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`uppercase font-bold tracking-wider ${
-                  isActive(link.href) ? "text-unify" : "text-white"
+                  isActive(link.href) ? "text-secondary-200" : "text-white"
                 }`}
               >
                 {link.label}

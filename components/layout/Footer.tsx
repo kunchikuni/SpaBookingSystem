@@ -7,11 +7,11 @@ export default function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <svg className="w-8 h-8 text-accent" viewBox="0 0 40 40" fill="currentColor" aria-hidden="true">
-                <path d="M20 2C11.163 2 4 9.163 4 18s7.163 16 16 16 16-7.163 16-16S28.837 2 20 2z" />
-              </svg>
-              <span className="text-xl font-playfair font-bold">{siteConfig.name}</span>
+            <div className="flex items-baseline gap-2 mb-4">
+              <span className="font-script text-2xl text-secondary-200 leading-none">Essentials</span>
+              <span className="text-[10px] tracking-[0.3em] text-white/70 font-medium uppercase">
+                by Tanya
+              </span>
             </div>
             <p className="text-white/80 leading-relaxed">{siteConfig.description}</p>
           </div>

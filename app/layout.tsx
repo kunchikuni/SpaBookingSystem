@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Source_Sans_3, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, Inter, Source_Sans_3, JetBrains_Mono, Parisienne } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -33,6 +33,16 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
+// Matches the script treatment of "Essentials" in the actual logo. Used
+// only for the wordmark in Header/Footer and the home hero -- never for
+// body copy, which needs to stay quickly legible.
+const script = Parisienne({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-script",
   display: "swap",
 });
 
@@ -93,7 +103,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${playfair.variable} ${inter.variable} ${sourceSans.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${playfair.variable} ${inter.variable} ${sourceSans.variable} ${jetbrainsMono.variable} ${script.variable} antialiased`}
       >
         <a
           href="#main-content"
