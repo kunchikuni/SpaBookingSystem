@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
 
 export default function Footer() {
   return (
@@ -10,11 +11,9 @@ export default function Footer() {
               <svg className="w-8 h-8 text-accent" viewBox="0 0 40 40" fill="currentColor" aria-hidden="true">
                 <path d="M20 2C11.163 2 4 9.163 4 18s7.163 16 16 16 16-7.163 16-16S28.837 2 20 2z" />
               </svg>
-              <span className="text-xl font-playfair font-bold">Essentials by Tanya</span>
+              <span className="text-xl font-playfair font-bold">{siteConfig.name}</span>
             </div>
-            <p className="text-white/80 leading-relaxed">
-              Your sanctuary for beauty, wellness, and rejuvenation.
-            </p>
+            <p className="text-white/80 leading-relaxed">{siteConfig.description}</p>
           </div>
 
           <div>
@@ -38,9 +37,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-playfair font-semibold mb-4">Contact Info</h3>
             <div className="space-y-2 text-white/80">
-              <div>123 Wellness Avenue</div>
-              <div>(555) 123-4567</div>
-              <div>info@essentialsbytanya.com</div>
+              <div>{siteConfig.address.street}</div>
+              <div>{siteConfig.phone}</div>
+              <div>{siteConfig.email}</div>
             </div>
           </div>
 
@@ -70,7 +69,7 @@ export default function Footer() {
             <a href="#" className="text-white/80 hover:text-accent">Facebook</a>
           </div>
           <p className="text-white/60 text-sm">
-            &copy; {new Date().getFullYear()} Essentials by Tanya. All Rights Reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.
           </p>
         </div>
       </div>

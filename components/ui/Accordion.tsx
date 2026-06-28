@@ -42,7 +42,7 @@ export default function Accordion({ items, defaultOpenId = null, allowMultiple =
           <div className="card" key={item.id}>
             <button
               onClick={() => toggle(item.id)}
-              className="w-full text-left flex justify-between items-center bg-transparent border-none p-0"
+              className="w-full text-left flex justify-between items-center bg-transparent border-none p-0 focus-ring"
               aria-expanded={isOpen}
             >
               <span className="text-lg font-playfair font-semibold text-primary">

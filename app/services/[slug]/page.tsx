@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getServiceBySlug } from "@/lib/repositories/serviceRepository";
 import { getFaqsForPage } from "@/lib/repositories/faqRepository";
 import { formatPrice, formatDuration } from "@/lib/format";
+import { siteConfig } from "@/lib/site-config";
 import Badge from "@/components/ui/Badge";
 import StarRating from "@/components/ui/StarRating";
 import Accordion from "@/components/ui/Accordion";
@@ -35,8 +36,44 @@ export default async function ServiceDetailPage({
 
   const faqs = getFaqsForPage("SERVICE_DETAIL");
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: service.name,
+    description: service.description,
+    provider: {
+      "@type": "HealthAndBeautyBusiness",
+      name: siteConfig.name,
+    },
+    offers: {
+      "@type": "Offer",
+      price: (service.priceCents / 100).toFixed(2),
+      priceCurrency: "USD",
+    },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="py-6 px-6 bg-surface">
         <div className="container mx-auto max-w-7xl">
           <nav className="flex items-center space-x-2 text-sm">

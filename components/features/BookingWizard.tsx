@@ -410,7 +410,7 @@ export default function BookingWizard({
                   <button
                     type="button"
                     onClick={() => goToMonth(-1)}
-                    className="p-2 text-primary hover:bg-primary-50 rounded-lg transition-colors"
+                    className="p-2 text-primary hover:bg-primary-50 rounded-lg transition-colors focus-ring"
                     aria-label="Previous month"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -423,7 +423,7 @@ export default function BookingWizard({
                   <button
                     type="button"
                     onClick={() => goToMonth(1)}
-                    className="p-2 text-primary hover:bg-primary-50 rounded-lg transition-colors"
+                    className="p-2 text-primary hover:bg-primary-50 rounded-lg transition-colors focus-ring"
                     aria-label="Next month"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

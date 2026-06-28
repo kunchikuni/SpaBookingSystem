@@ -58,7 +58,7 @@ export default function Modal({ isOpen, onClose, title, children, maxWidth = "2x
             <button
               onClick={onClose}
               aria-label="Close"
-              className="p-2 text-text-secondary hover:text-primary transition-colors"
+              className="p-2 text-text-secondary hover:text-primary transition-colors focus-ring"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path

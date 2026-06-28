@@ -69,7 +69,7 @@ export default function Header() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden p-2 text-white"
+          className="lg:hidden p-2 text-white focus-ring"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
