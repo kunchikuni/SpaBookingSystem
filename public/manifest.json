@@ -1,6 +1,6 @@
 {
-  "short_name": "beauty_therapy_spa",
-  "name": "beauty_therapy_spa",
+  "short_name": "Essentials by Tanya",
+  "name": "Essentials by Tanya — Beauty Therapy & Spa",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#8B7355",
+  "background_color": "#FEFCF8"
 }

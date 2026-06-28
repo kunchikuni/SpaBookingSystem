@@ -1,77 +1,90 @@
-# HTML
+# Essentials by Tanya
 
-A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
+A full-stack beauty therapy and spa booking platform — services catalog,
+therapist profiles, and a real multi-step booking wizard with live
+availability.
 
-## 🚀 Features
+This branch (`rebuild/fullstack-app-router`) is a ground-up rebuild on
+Next.js App Router with a designed (not yet connected) database. The
+original static-HTML-turned-Pages-Router site is preserved on `main` and
+on `fix/critical-bugs-and-refactor`, which contains targeted bug fixes to
+that earlier architecture without changing it.
 
-- **HTML5** - Modern HTML structure with best practices
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **Custom Components** - Pre-built component classes for buttons and containers
-- **NPM Scripts** - Easy-to-use commands for development and building
-- **Responsive Design** - Mobile-first approach for all screen sizes
-- **Yet to be added a appointment booking system**
-- Target company - Tanya Essentials
+## Tech stack
 
-## 📋 Prerequisites
+- **Framework:** Next.js 16 (App Router, Turbopack)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 3.4
+- **ORM / Database:** Prisma, schema designed for PostgreSQL — see
+  [`docs/DATABASE_SCHEMA.md`](docs/DATABASE_SCHEMA.md). Not connected to a
+  live database yet; the app currently reads from seed data through the
+  repository layer (see "Data layer" below).
+- **Validation:** Zod
 
-- Node.js (v12.x or higher)
-- npm or yarn
+## Getting started
 
-## 🛠️ Installation
-
-1. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
-```
-
-2. Start the development server:
-```bash
 npm run dev
-# or
-yarn dev
 ```
 
-## 📁 Project Structure
+Open [http://localhost:3000](http://localhost:3000).
+
+There's no database to provision to run this locally — see "Data layer."
+
+## Project structure
 
 ```
-html_app/
-├── css/
-│   ├── tailwind.css   # Tailwind source file with custom utilities
-│   └── main.css       # Compiled CSS (generated)
-├── pages/             # HTML pages
-├── index.html         # Main entry point
-├── package.json       # Project dependencies and scripts
-└── tailwind.config.js # Tailwind CSS configuration
+app/              Routes (pages + API route handlers)
+components/
+  layout/         Header, Footer
+  ui/             Generic primitives: Button, Card, Modal, Accordion, Badge, StarRating
+  features/       Composed pieces: ServiceCard, BookingWizard, ContactForm, etc.
+lib/
+  seed-data/      Source-of-truth content (services, therapists, products, etc.)
+  repositories/   Data-access functions -- the only layer that will import Prisma
+                  once a database is connected
+  validation/     Zod schemas for API request bodies
+prisma/
+  schema.prisma   Full data model
+  seed.ts         Populates a real database from lib/seed-data/ once one exists
+docs/             Architecture, database schema, and API spec write-ups
 ```
 
-## 🎨 Styling
+Full details: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md),
+[`docs/DATABASE_SCHEMA.md`](docs/DATABASE_SCHEMA.md),
+[`docs/API_SPEC.md`](docs/API_SPEC.md).
 
-This project uses Tailwind CSS for styling. Custom utility classes include:
+## Data layer
 
+Nothing is connected to a live database yet. `lib/repositories/` read
+directly from `lib/seed-data/` in-memory, using the same function
+signatures a real Prisma-backed version would have — so connecting a
+real database later is a change inside each repository file, not a
+rewrite of any page or API route. `prisma/seed.ts` is written and ready
+to populate a real database from that same seed data once `DATABASE_URL`
+points at one.
 
-## 🧩 Customization
+One real consequence of this: booking, contact, and newsletter data is
+in-memory and resets whenever the server restarts.
 
-To customize the Tailwind configuration, edit the `tailwind.config.js` file:
+## Scripts
 
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build |
+| `npm run start` | Run a production build |
+| `npm run lint` | Lint |
+| `npm run db:generate` | Generate the Prisma client (requires network access to Prisma's engine binaries) |
+| `npm run db:push` | Push the schema to `DATABASE_URL` |
+| `npm run db:seed` | Seed a connected database from `lib/seed-data/` |
 
-## 📦 Build for Production
+## Current status
 
-Build the CSS for production:
-
-```bash
-npm run build:css
-# or
-yarn build:css
-```
-
-## 📱 Responsive Design
-
-The app is built with responsive design using Tailwind CSS breakpoints:
-
-- `sm`: 640px and up
-- `md`: 768px and up
-- `lg`: 1024px and up
-- `xl`: 1280px and up
-- `2xl`: 1536px and y HTML and Tailwind CSS
+All 6 originally planned phases are complete: architecture/schema/API
+design, project scaffolding, the data layer, all core marketing pages, the
+booking wizard, and production-readiness basics (SEO metadata, sitemap,
+JSON-LD, loading/error states, an accessibility pass). Not yet done:
+connecting a real database, authentication/an admin panel for managing
+content without a DB client, and automated tests.
