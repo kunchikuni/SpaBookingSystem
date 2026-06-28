@@ -48,6 +48,7 @@ export default function HeroSlideshow({ images, intervalMs = 6000 }: HeroSlidesh
           alt=""
           fill
           priority={index === 0}
+          sizes="100vw"
           className={`object-cover transition-opacity duration-1000 ease-in-out ${
             index === current ? "opacity-100" : "opacity-0"
           }`}

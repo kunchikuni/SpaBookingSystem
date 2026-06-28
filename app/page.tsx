@@ -105,6 +105,7 @@ export default function Home() {
                     src={item.image}
                     alt=""
                     fill
+                    sizes="160px"
                     className="object-cover rounded-full border-4 border-background shadow-soft"
                   />
                   <span className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center font-playfair font-bold">
