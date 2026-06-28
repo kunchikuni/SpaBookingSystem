@@ -12,23 +12,51 @@ export const metadata: Metadata = {
 
 const CATEGORIES = [
   { value: "", label: "All" },
-  { value: "FACIAL", label: "Facial" },
-  { value: "MASSAGE", label: "Massage" },
+  { value: "FACIAL", label: "Facials" },
+  { value: "FACIAL_ELECTRICAL", label: "Facial Electricals" },
+  { value: "MASSAGE", label: "Massages" },
   { value: "BODY", label: "Body" },
+  { value: "WAXING", label: "Waxing" },
+  { value: "CHEMICAL_PEEL", label: "Chemical Peels" },
+  { value: "SPECIALIZED", label: "Specialized" },
+  { value: "VAJACIAL", label: "Vajacial" },
+  { value: "LASHES_BROWS", label: "Lashes & Brows" },
+  { value: "NAILS", label: "Artificial Nails" },
+  { value: "MANICURE", label: "Manicure" },
+  { value: "PEDICURE", label: "Pedicure" },
+  { value: "PACKAGE", label: "Packages" },
 ];
 
 const CATEGORY_LABELS: Record<string, string> = {
   FACIAL: "Facials",
+  FACIAL_ELECTRICAL: "Facial Electricals",
   MASSAGE: "Massages",
-  BODY: "Body treatments",
+  BODY: "Body",
+  WAXING: "Waxing",
+  CHEMICAL_PEEL: "Chemical Peels",
+  SPECIALIZED: "Specialized Treatments",
+  VAJACIAL: "Vajacial",
+  LASHES_BROWS: "Lashes & Brows",
+  NAILS: "Artificial Nails",
+  MANICURE: "Manicure",
+  PEDICURE: "Pedicure",
   PACKAGE: "Packages",
 };
 
 const RIBBON_BY_CATEGORY: Record<string, "primary" | "secondary" | "accent"> = {
   FACIAL: "secondary",
+  FACIAL_ELECTRICAL: "secondary",
   MASSAGE: "primary",
   BODY: "accent",
-  PACKAGE: "primary",
+  WAXING: "primary",
+  CHEMICAL_PEEL: "secondary",
+  SPECIALIZED: "accent",
+  VAJACIAL: "secondary",
+  LASHES_BROWS: "secondary",
+  NAILS: "primary",
+  MANICURE: "primary",
+  PEDICURE: "primary",
+  PACKAGE: "accent",
 };
 
 export default async function ServicesPage({

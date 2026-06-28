@@ -8,9 +8,18 @@ import { formatPrice, formatDuration } from "@/lib/format";
 const STEPS = ["Service", "Therapist", "Date & Time", "Details"];
 
 const CATEGORY_LABELS: Record<string, string> = {
-  FACIAL: "Facial Treatments",
-  MASSAGE: "Massage Therapy",
-  BODY: "Body Treatments",
+  FACIAL: "Facials",
+  FACIAL_ELECTRICAL: "Facial Electricals",
+  MASSAGE: "Massages",
+  BODY: "Body",
+  WAXING: "Waxing",
+  CHEMICAL_PEEL: "Chemical Peels",
+  SPECIALIZED: "Specialized Treatments",
+  VAJACIAL: "Vajacial",
+  LASHES_BROWS: "Lashes & Brows",
+  NAILS: "Artificial Nails",
+  MANICURE: "Manicure",
+  PEDICURE: "Pedicure",
   PACKAGE: "Packages",
 };
 

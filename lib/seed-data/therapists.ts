@@ -30,7 +30,7 @@ export const therapists: TherapistSeed[] = [
     reviewCount: 127,
     photoUrl:
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2940&auto=format&fit=crop",
-    serviceIds: ["signature-facial", "anti-aging-facial"],
+    serviceIds: ["an-essentials-must", "essentials-acne-attack", "growth-factor-anti-ageing", "essentials-skin-quench", "brightening-glow", "acne-attack-electrical", "hydrating-therapy-electrical", "detox-facial-electrical", "rice-bran-ao", "lacti-firm-30-10", "lacti-firm-90-10", "alpa-peel", "retistore", "retistore-plus", "beta-peel-retinol", "beta-peel-plus", "azeac-peel", "dermaplaning", "full-face-microneedling", "half-face-microneedling"],
   },
   {
     id: "james",
@@ -45,7 +45,7 @@ export const therapists: TherapistSeed[] = [
     reviewCount: 94,
     photoUrl:
       "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop",
-    serviceIds: ["deep-tissue-massage", "swedish-massage", "hot-stone-massage"],
+    serviceIds: ["essentials-soothing-massage", "deep-muscle-reliever", "heat-therapy-massage", "back-neck-soothing", "deep-back-neck", "scalp-neck-shoulder", "lower-limbs-massage", "indian-crown-massage"],
   },
   {
     id: "lisa",
@@ -60,7 +60,7 @@ export const therapists: TherapistSeed[] = [
     reviewCount: 156,
     photoUrl:
       "https://images.unsplash.com/photo-1594824488675-58d12c0d5c8a?q=80&w=2787&auto=format&fit=crop",
-    serviceIds: ["aromatherapy-massage", "body-renewal-wrap"],
+    serviceIds: ["aroma-infused-massage", "bamboo-massage", "mamas-prenatal-treat", "vajacial", "vaj-peel", "vaj-microneedling", "eyebrow-shape-tint", "eyebrow-shape", "eyelash-tint", "eyebrow-tint"],
   },
   {
     id: "michael",
@@ -75,7 +75,7 @@ export const therapists: TherapistSeed[] = [
     reviewCount: 82,
     photoUrl:
       "https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=2787&auto=format&fit=crop",
-    serviceIds: ["body-renewal-wrap"],
+    serviceIds: ["body-plan-6", "body-plan-8", "sauna-heat-therapy", "body-polish", "full-body-clean-up", "full-intimate-wax", "front-intimate-wax", "intimate-line", "full-leg-wax", "three-quarter-leg-wax", "half-leg-wax", "full-arm-wax", "underarm-wax", "back-wax", "chest-wax", "stomach-wax", "full-face-wax", "nose-wax", "chin-wax"],
   },
   {
     id: "emma",
@@ -90,7 +90,7 @@ export const therapists: TherapistSeed[] = [
     reviewCount: 73,
     photoUrl:
       "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?q=80&w=2787&auto=format&fit=crop",
-    serviceIds: [], // No nail service exists in the catalog yet -- see docs/DATABASE_SCHEMA.md
+    serviceIds: ["acrylic-natural-tips", "acrylic-french-tips", "acrylic-overlay-hard-gel", "sculptured-nails", "acrylic-overlay-gel", "acrylic-backfill", "acrylic-backfill-gel", "nail-fix", "stick-ons-normal-polish", "stick-ons-gel", "3d-nail-art", "nail-hardener-polish", "french-shellac-polish", "ombre-tips", "essentials-manicure", "essentials-manicure-gel", "french-manicure", "paraffin-manicure", "cnd-shellac", "cnd-vinylux", "essentials-foot-works", "french-pedicure", "paraffin-pedicure", "gel-pedicure", "acrylic-pedicure", "spalicious-foot-peel", "acrylic-toe-nails", "gel-paraffin-pedicure"]
   },
   {
     id: "david",
@@ -105,6 +105,6 @@ export const therapists: TherapistSeed[] = [
     reviewCount: 108,
     photoUrl:
       "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?q=80&w=2787&auto=format&fit=crop",
-    serviceIds: ["deep-tissue-massage", "hot-stone-massage"],
+    serviceIds: ["deep-muscle-reliever", "heat-therapy-massage", "essentials-soothing-massage"],
   },
 ];
