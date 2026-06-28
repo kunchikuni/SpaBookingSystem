@@ -1,33 +1,34 @@
 {
-  "name": "beauty_therapy_spa",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "dependencies": {
-    "@tailwindcss/forms": "^0.5.7",
-    "html-to-jsx": "^0.0.4",
-    "next": "^13.5.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss-animate": "^1.0.7",
-    "tailwindcss-elevation": "^2.0.0",
-    "tailwindcss-fluid-type": "^2.0.7"
-  },
+  "name": "beauty-therapy-spa",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Essentials by Tanya — beauty therapy & spa booking platform",
   "scripts": {
-    "build:css": "npx tailwindcss -i ./css/tailwind.css -o ./css/main.css",
-    "watch:css": "npx tailwindcss -i ./css/tailwind.css -o ./css/main.css --watch",
-    "dev:css": "npm run watch:css",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts"
   },
-  "author": "",
-  "license": "MIT",
+  "dependencies": {
+    "next": "16.2.9",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "@prisma/client": "^6.16.0",
+    "zod": "^3.24.1",
+    "clsx": "^2.1.1"
+  },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/container-queries": "^0.1.1",
-    "@tailwindcss/line-clamp": "^0.1.0",
-    "@tailwindcss/typography": "^0.5.16",
-    "tailwindcss": "^3.4.17"
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20",
+    "prisma": "^6.16.0",
+    "tsx": "^4.19.2"
   }
 }

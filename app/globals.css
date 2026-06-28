@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-primary-600 hover:shadow-gentle focus:outline-none focus:ring-2 focus:ring-primary-300;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-secondary-600 hover:shadow-gentle focus:outline-none focus:ring-2 focus:ring-secondary-300;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-accent-600 hover:shadow-gentle focus:outline-none focus:ring-2 focus:ring-accent-300;
+  }
+
+  .card {
+    @apply bg-surface rounded-xl p-6 shadow-gentle transition-all duration-300 hover:shadow-soft;
+  }
+
+  .card-elevated {
+    @apply bg-surface rounded-xl p-6 shadow-soft transition-all duration-300 hover:shadow-elevated;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 border border-surface rounded-lg bg-background text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-300 transition-all duration-200;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-200 hover:shadow-soft;
+  }
+}
+
+@layer utilities {
+  .organic-shape-1 {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  .organic-shape-2 {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+
+  .organic-shape-3 {
+    border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+  }
+}
