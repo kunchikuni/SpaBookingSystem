@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllServices } from "@/lib/repositories/serviceRepository";
-import { formatPrice, formatDuration } from "@/lib/format";
-import PriceListRow from "@/components/ui/PriceListRow";
-import Badge from "@/components/ui/Badge";
+import ServiceCard from "@/components/features/ServiceCard";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -43,22 +41,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   PACKAGE: "Packages",
 };
 
-const RIBBON_BY_CATEGORY: Record<string, "primary" | "secondary" | "accent"> = {
-  FACIAL: "secondary",
-  FACIAL_ELECTRICAL: "secondary",
-  MASSAGE: "primary",
-  BODY: "accent",
-  WAXING: "primary",
-  CHEMICAL_PEEL: "secondary",
-  SPECIALIZED: "accent",
-  VAJACIAL: "secondary",
-  LASHES_BROWS: "secondary",
-  NAILS: "primary",
-  MANICURE: "primary",
-  PEDICURE: "primary",
-  PACKAGE: "accent",
-};
-
 export default async function ServicesPage({
   searchParams,
 }: {
@@ -84,9 +66,9 @@ export default async function ServicesPage({
         </p>
       </section>
 
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-4xl">
-          <div className="flex justify-center gap-3 mb-12 flex-wrap">
+      <section className="py-16 px-6 bg-surface">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex justify-center gap-3 mb-16 flex-wrap">
             {CATEGORIES.map((c) => (
               <a
                 key={c.value}
@@ -94,7 +76,7 @@ export default async function ServicesPage({
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   (category ?? "") === c.value
                     ? "bg-primary text-white"
-                    : "bg-surface text-text-secondary hover:bg-primary-50"
+                    : "bg-background text-text-secondary hover:bg-primary-50"
                 }`}
               >
                 {c.label}
@@ -102,29 +84,15 @@ export default async function ServicesPage({
             ))}
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-20">
             {Array.from(grouped.entries()).map(([cat, catServices]) => (
               <div key={cat}>
-                <h2 className="text-2xl font-playfair font-bold text-primary mb-5 underline decoration-secondary underline-offset-8">
+                <h2 className="text-2xl font-playfair font-bold text-primary mb-8 text-center underline decoration-secondary underline-offset-8">
                   {CATEGORY_LABELS[cat] ?? cat}
                 </h2>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {catServices.map((service) => (
-                    <PriceListRow
-                      key={service.id}
-                      name={service.name}
-                      detail={formatDuration(service.durationMinutes)}
-                      price={formatPrice(service.priceCents)}
-                      ribbonTone={RIBBON_BY_CATEGORY[cat] ?? "primary"}
-                      href={`/services/${service.slug}`}
-                      badge={
-                        service.isFeatured ? (
-                          <Badge tone="accent" className="text-[10px]">
-                            Popular
-                          </Badge>
-                        ) : undefined
-                      }
-                    />
+                    <ServiceCard key={service.id} service={service} />
                   ))}
                 </div>
               </div>
@@ -135,7 +103,7 @@ export default async function ServicesPage({
             <p className="text-center text-text-secondary py-12">No services in this category yet.</p>
           )}
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link href="/booking" className="btn-primary">
               Book an Appointment
             </Link>

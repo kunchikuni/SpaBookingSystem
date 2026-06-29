@@ -1,39 +1,41 @@
 import Link from "next/link";
 import Image from "next/image";
-import Card from "@/components/ui/Card";
-import Badge from "@/components/ui/Badge";
-import StarRating from "@/components/ui/StarRating";
-import { formatPrice, formatDuration } from "@/lib/format";
+import { formatPrice } from "@/lib/format";
 import type { ServiceSeed } from "@/lib/seed-data/services";
 
 export default function ServiceCard({ service }: { service: ServiceSeed }) {
   return (
-    <Link href={`/services/${service.slug}`}>
-      <Card hoverLift className="h-full flex flex-col cursor-pointer">
-        <div className="relative mb-4 -mx-6 -mt-6">
+    <div className="bg-background h-full flex flex-col">
+      <Link href={`/services/${service.slug}`} className="block">
+        <div className="relative w-full aspect-[4/3] overflow-hidden">
           <Image
             src={service.imageUrl}
             alt={service.name}
-            width={400}
-            height={240}
-            className="w-full h-48 object-cover rounded-t-xl"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover"
           />
-          {service.isFeatured && (
-            <Badge tone="accent" className="absolute top-3 right-3">
-              Popular
-            </Badge>
-          )}
         </div>
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-lg font-playfair font-semibold text-primary">{service.name}</h3>
-        </div>
-        <StarRating rating={service.rating} />
-        <p className="text-text-secondary text-sm my-3 flex-1">{service.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-accent font-semibold">From {formatPrice(service.priceCents)}</span>
-          <span className="text-xs text-text-secondary">{formatDuration(service.durationMinutes)}</span>
-        </div>
-      </Card>
-    </Link>
+      </Link>
+      <div className="p-6 flex flex-col flex-1">
+        <Link href={`/services/${service.slug}`}>
+          <h3 className="text-lg font-playfair text-text-primary mb-2 hover:text-primary transition-colors">
+            {service.name}
+          </h3>
+        </Link>
+        <p className="font-playfair text-secondary text-sm uppercase tracking-wide mb-3">
+          Starts at {formatPrice(service.priceCents)}
+        </p>
+        <p className="text-text-secondary text-sm leading-relaxed mb-6 flex-1">
+          {service.description}
+        </p>
+        <Link
+          href={`/booking?service=${service.id}`}
+          className="self-start bg-secondary-100 text-text-primary text-xs font-medium uppercase tracking-wider px-6 py-3 hover:bg-secondary-200 transition-colors"
+        >
+          Book Now
+        </Link>
+      </div>
+    </div>
   );
 }
